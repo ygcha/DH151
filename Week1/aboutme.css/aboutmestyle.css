@@ -1,0 +1,38 @@
+body,html {
+	margin:0;
+	height:100%;
+	width:100%;
+}
+
+body {
+    display: grid;
+	grid-template-rows: 90px 1fr;
+	grid-template-columns: 300px 1fr;
+	grid-template-areas: 
+	"header header"
+	"sidebar content";
+}
+
+.header {
+	grid-area: header;
+	padding:10px;
+    background-color: #4ABDAC;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	padding-left:20px;
+    background-color: #DFDCE3;
+    font-family: 'Roboto', sans-serif;
+}
+.content {
+	grid-area: content;
+    padding-left:20px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+img.rounded-corners {
+    border-radius: 20px;
+}
