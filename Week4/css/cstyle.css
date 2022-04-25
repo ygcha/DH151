@@ -12,7 +12,7 @@ body {
 	font-family: "Poppins";
 	display: grid;
 	grid-template-rows: 80px 1fr 50px;
-	grid-template-columns: 30% 70%;
+	grid-template-columns: 25% 75%;
 	grid-template-areas: 
 	"header header"
 	"sidebar content"
@@ -54,7 +54,7 @@ body {
 	padding: 10px;
 	background: #451400;
 	color: white;
-	margin: 10px;
+	margin: 8px;
 	cursor: pointer;
 	border-radius: 5px;
 }
@@ -64,6 +64,9 @@ body {
 	color: black;
 }
 
+.picture {
+	align-content: center;
+}
 
 .content {
 	grid-area: content;
