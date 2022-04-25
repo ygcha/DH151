@@ -2,7 +2,7 @@
 let map;
 let lat = 0;
 let lon = 0;
-let zl = 1;
+let zl = 3;
 
 // path to csv data
 let path = "data/chipotle_store.csv";
@@ -20,13 +20,13 @@ $( document ).ready(function() {
 function createMap(lat,lon,zl){
 	map = L.map('map').setView([lat,lon], zl);
 
-	L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 }
 
 function flyToIndex(lat, lon){
-	map.flyTo([lat,lon],12)
+	map.flyTo([lat,lon],7)
 };
 
 // function to read csv data
@@ -60,7 +60,7 @@ function mapCSV(data){
 		// create marker
 		let marker = L.circleMarker([item.latitude,item.longitude],circleOptions)
 		.on('mouseover', function(){
-			this.bindPopup(`${item.date}<br>${item.desc}`).openPopup()
+			this.bindPopup(`<h3>${item.state}</h3><p><strong>Location: </strong>${item.location}</p><p><strong>Address: </strong>${item.address}</p>`).openPopup()
 		})
 
 		// add marker to featuregroup		
