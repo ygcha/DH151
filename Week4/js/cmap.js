@@ -21,7 +21,7 @@ $( document ).ready(function() {
 function createMap(lat,lon,zl){
 	map = L.map('map').setView([lat,lon], zl);
 
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 }
@@ -50,7 +50,7 @@ function mapCSV(data){
 	
 	// circle options
 	let circleOptions = {
-		radius: 5,
+		radius: 6,
 		weight: 1,
 		color: 'white',
 		fillColor: 'red',
@@ -62,7 +62,7 @@ function mapCSV(data){
 		// create marker
 		let marker = L.circleMarker([item.latitude,item.longitude],circleOptions)
 		.on('mouseover', function(){
-			this.bindPopup(`<h3>${item.state}</h3><p><strong>Location: </strong>${item.location}</p><p><strong>Address: </strong>${item.address}</p>`).openPopup()
+			this.bindPopup(`<h3>${item.state}</h3><br>${item.location}<br>${item.address}`).openPopup()
 		})
 
 		// add marker to featuregroup		
