@@ -50,7 +50,8 @@ function mapCSV(data){
 	
 	// circle options
 	let circleOptions = {
-		radius: 6,
+		url: "https://lh3.googleusercontent.com/pw/AM-JKLV1rS6Z45bWOg82sG2Q1R-NuLo_npMyhtDhIHpxg4ptZVOMWapEI1leZGm2rbUfaM5c2psajx1hnlhduuH-wYGUGAeVvoZODc3IYVed-0WxYPzoxkdlptq0IGjPrxB_FteAn0fc5nButy4_Tntk3mBixA=s1835-no?authuser=0",
+		radius: 5,
 		weight: 1,
 		color: 'white',
 		fillColor: 'red',
