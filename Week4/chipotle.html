@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Chipotle Locations Around the World</title>
+        <meta charset="utf-8" />
+    
+        <!-- style sheets -->
+        <link rel="stylesheet" href="css/cstyle.css">
+    
+        <!-- leaflet -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+        <!-- papaparse for csv data -->
+        <script src="js/papaparse.min.js"></script>
+</head>
+ 
+<body>
+	<div class="header">
+		<div class ="center">Chipotle Locations Around the World</div>
+	</div>
+	<div class="sidebar">
+		<p>Key Locations Around the World</p>
+		<p>Chipotle Mexican Grill, Inc., often known simply as Chipotle, is an American chain of fast casual restaurants in the United States, United Kingdom, Canada, Germany, and France, specializing in tacos and Mission burritos that are made to order in front of the customer. </p>
+		<div class="sidebar-item" onclick="flyToIndex(40.76762,-73.96820)">California</div>
+		<div class="sidebar-item" onclick="flyToIndex(40.85086,-73.88282)">Canada</div>
+		<div class="sidebar-item" onclick="flyToIndex(40.58154,-74.16021)">United Kingdom</div>
+		<div class="sidebar-item" onclick="flyToIndex(40.64409,-73.95250)">France</div>
+		<div class="sidebar-item" onclick="flyToIndex(40.732858,-73.791825)">Germany</div>
+	</div>
+	<div class="content">
+		<div id="map"></div>
+	</div>
+	<div class="footer">
+		Source: <a href="https://www.kaggle.com/datasets/jeffreybraun/chipotle-locations">Chipotle Locations on Kaggle</a>
+	</div>
+
+	<script src="js/cmap.js"></script>
+</body>
+</html>
