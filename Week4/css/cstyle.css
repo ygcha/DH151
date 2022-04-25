@@ -9,7 +9,7 @@ body,html {
 }
 
 body {
-	font-family: "Arial";
+	font-family: "Poppins";
 	display: grid;
 	grid-template-rows: 80px 1fr 50px;
 	grid-template-columns: 30% 70%;
@@ -22,7 +22,7 @@ body {
 .header {
 	grid-area: header;
 	padding:10px;
-	background-color: rgb(0, 0, 0);
+	background-color: #a81612;
 	color: white;
 	font-size: 2em;
 	font-weight: bolder;
@@ -37,16 +37,17 @@ body {
 	color: white;
 	grid-area: sidebar;
 	padding:20px;
-	background-color: rgb(0, 0, 0);
+	background-color: #451400;
 	overflow: auto;
 }
 
 .sidebar-item{
 	padding: 10px;
-	background: #242424;
+	background: #545454;
 	color: white;
 	margin: 5px;
 	cursor: pointer;
+	border-radius: 5px;
 }
 
 .sidebar-item:hover {

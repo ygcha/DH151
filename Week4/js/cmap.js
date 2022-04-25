@@ -5,8 +5,9 @@ let lon = 0;
 let zl = 3;
 
 // path to csv data
-let path = "data/chipotle_store.csv";
+let path = "data/chipotle.csv";
 
+// global variables
 let markers = L.featureGroup();
 
 
@@ -25,9 +26,6 @@ function createMap(lat,lon,zl){
 	}).addTo(map);
 }
 
-function flyToIndex(lat, lon){
-	map.flyTo([lat,lon],7)
-};
 
 // function to read csv data
 function readCSV(path){
@@ -43,6 +41,10 @@ function readCSV(path){
 		}
 	});
 }
+
+function flyToIndex(lat, lon){
+	map.flyTo([lat,lon],7)
+};
 
 function mapCSV(data){
 	
