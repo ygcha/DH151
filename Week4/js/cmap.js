@@ -10,11 +10,10 @@ let path = "data/chipotle.csv";
 // global variables
 let markers = L.featureGroup();
 
-
 // initialize
 $( document ).ready(function() {
     createMap(lat,lon,zl);
-    readCSV(path);
+	readCSV()
 });
 
 // create the map
@@ -28,7 +27,7 @@ function createMap(lat,lon,zl){
 
 
 // function to read csv data
-function readCSV(path){
+function readCSV(){
 	Papa.parse(path, {
 		header: true,
 		download: true,
