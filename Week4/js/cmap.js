@@ -49,7 +49,6 @@ function mapCSV(data){
 	
 	// circle options
 	let circleOptions = {
-		url: "https://lh3.googleusercontent.com/pw/AM-JKLV1rS6Z45bWOg82sG2Q1R-NuLo_npMyhtDhIHpxg4ptZVOMWapEI1leZGm2rbUfaM5c2psajx1hnlhduuH-wYGUGAeVvoZODc3IYVed-0WxYPzoxkdlptq0IGjPrxB_FteAn0fc5nButy4_Tntk3mBixA=s1835-no?authuser=0",
 		radius: 5,
 		weight: 1,
 		color: 'white',
@@ -61,10 +60,13 @@ function mapCSV(data){
 	data.data.forEach(function(item,index){
 		// create marker
 		let marker = L.circleMarker([item.latitude,item.longitude],circleOptions)
-		.on('mouseover', function(){
-			this.bindPopup(`<h3>${item.state}</h3><br>${item.location}<br>${item.address}`).openPopup()
-		})
-
+		.on(
+			"mouseover",
+			function () {
+				this.bindPopup(
+					`<h3>${item.state}</h3><p><strong> Location: </strong>${item.location}</p><p><strong> Address: </strong>${item.address}</p><p><strong></p>`
+				).openPopup();
+			})
 		// add marker to featuregroup		
 		markers.addLayer(marker)
 	})
